@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./static/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./static/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./static/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./static/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="./static/stylesheets/main.css">
+    <script defer src="./static/scripts/main.js"></script>
+    <script src="https://kit.fontawesome.com/ac0514ba62.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>bhscodz</title>
+</head>
+<body>
+    <div class="banner" id="intro">
+        Welcome to Bhscodz intro
+    </div>
+    <header>
+        <nav>
+            <div class="navigation flex_row"  style="overflow-x: auto;">
+                <div id='drop_down' class="nav_short" style="font-size: 30px;">⏬</div>
+                <div class="small_box"><a href="#about">about me</a></div>
+                <div class="small_box">resume</div>
+                <div class="small_box">blog</div>
+                <div class="small_box"><a href="#projects">projects</a></div>
+                <div class="small_box"><a href="#contact">contact me</a></div>
+                <div id="search_box" style="margin-left:auto;"><div class="small_box flex_row" style="flex-flow: nowrap;"><button autofocus=on >🔍</button><input class="base" placeholder="search my site" type="text" name="serach_content" id="search"></div></div>
+            </div>
+        </nav>
+        <div class="scroll_bar"></div>
+    </header>
+    <div class="big_img"><img src="./static/images/big-img4.jpg" alt="big img"></div>
+    <div class="main flex_column" style="margin-top:20px;">
+        <div id="intro_container" class="flex_row" style="gap:0px; z-index: 0;">
+            <div class="side_img flex_column">
+                <div class="flex_column">
+                        <img src="./static/images/my_pic.png" alt="my pic" style="border-radius: 50%; 
+                    width:200px ;height:200px; border:5px solid white; background-color:bisque;">
+                    <p>Follow me on</p>
+                    <div class="flex_row">
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div id="about" class="large_box flex_column front_page" style="position:relative; align-items: flex-start; border :2px solid white;">
+                <h1 class="flex_row sticky_header">About Me</h1>    
+                <h2>Hello</h2>
+                <h3>I am Bhaskar Sahu</h3>
+                <p>I am a 19 year old software developer</p>
+                <p>I develop games websites and APIS</p>
+                <p>I also write blog about my work sometimes</p>
+                </div>
+            </div>
+        <div id="tech" class="large_box flex_column front_page_single">
+            <h1 class="flex_row sticky_header" >Technology i know</h1>  
+                <p><details><summary>Python</summary>
+                    <p>Django framework</p>
+                    <p>Flask</p>
+                    <p>Sqlalchemi (Orm)</p>
+                </details></p>
+                <p>C++</p>
+                <p><details><summary>Java script</summary>
+                    <p>Vanila js</p>
+                    <p>Jquery</p>
+                </details></p>
+                <p>CSS and Html</p>
+                <p>Redis</p>
+        </div>
+        <div id="edu" class="large_box flex_column front_page_single">
+            <h1 class="flex_row sticky_header">Academics</h1>  
+                <article class="flex_column"><h3>School Education</h3>
+                    <p>Chavara VidyaPeeth (2008-2023)</p>
+                    <p>Grade:<br> class10th:93.8% <br>class12th(PCM):94.4%</p>
+                </article>
+                <article class="flex_column"><h3>College</h3>
+                    <p>NIT</p>
+                </article>
+                <article class="flex_column"><h3>Other</h3>
+                    
+                </article>
+        </div>
+        
+        <div id="projects" class="large_box flex_column front_page_single" style="position:relative; justify-content: flex-start;">
+            <h1 class="flex_row sticky_header" >My Projects</h1> 
+            <hr></hr>
+            <article class="flex_column">
+                <h3>Chat application</h3>
+                <p id="p1">A real time chat application using django channels and Daphne</p>
+                <h4>Description:</h4>
+                <div style="overflow: auto; width:100%; height:220px; border:2px solid white;">
+                <p>Implimentation of ASGI Dephne to build a real time chat application which connects with websockets</p>
+                <p>It utilises Django channel frame work to make rooms and utilizes django authetication backends for authentication</p>
+                <p>I also implimented django restfull api with jquery ajax to make post calls</p>
+                <p> I used redis backend layer for data transfer to database</p>
+                </div>
+                <p><a href="">read full blog about features and technologies used here</a></p>
+                <a href="https://github.com/bhscodz/chat-application">see full code here  <i class="fa-brands fa-github"></i></a>
+                
+            </article>
+            <div class="side_button flex_row" style="justify-content: space-between; width:100% ;border:none; position:absolute; bottom:0; left:0;">
+                <i id='left' class="fa-solid fa-chevron-left nav_b" style="color: #63E6BE;"></i>
+                <i id = 'right' class="fa-solid fa-angle-right nav_b" style="color: #63E6BE;"></i></div>
+            </div>
+        </div>
+        <footer class="flex_column" style="background-color: black;">
+            <p style="font-size: 30px;">©Bhscodz</p>
+            <article>
+                <h2 id="contact">Contact me</h2>
+                <a href="">Linkedin     <i class="fa-brands fa-github"></i></a><br>
+                <a href="https://github.com/bhscodz">Github     <i class="fa-brands fa-linkedin"></i></a><br>
+                <a href="mailto:bhscodz7@gmail.com"> Email     <i class="fa-regular fa-envelope"></i></a>
+                <p></p>
+            </article>
+        </footer>
+    </div>
+    
+</body>
+</html>
