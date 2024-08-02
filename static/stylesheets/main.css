@@ -38,6 +38,16 @@ body{
 img{
     display:block;
 }
+.my_pic_style{
+    width:30vw;
+    height:auto;
+    background-color: bisque;
+}
+.img_wrapper{
+    width: 100%;
+    display:grid;
+    place-items: center;
+}
 a{ 
     color:green;
     text-decoration: none;
@@ -160,6 +170,9 @@ input.base{
 }
 
 @media screen and (max-width:426px) {
+    img.my_pic_style{
+        width:70vw;
+    }
     #projects{
         height:90vh;
     }
@@ -195,6 +208,9 @@ input.base{
     
 }
 @media screen and (max-width:780px){
+    .my_pic_style{
+        width:50vw;
+    }
     .front_page{
         height:70vh;
         width:80vw;
