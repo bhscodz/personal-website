@@ -182,8 +182,11 @@ input.base{
     justify-content: center;
 }
 .card{
-    width:500px;
-    margin:0px 20px 0px 20px;
+    width:80vw;
+    /* margin:0px 20px 0px 20px; */
+}
+footer{
+    border-top:2px solid white;
 }
 @media screen and (max-width:426px) {
     img.my_pic_style{
@@ -205,6 +208,7 @@ input.base{
         flex-flow:column nowrap;
         align-items: start;
         justify-content: space-evenly;
+        background-color:rgba(0,0,0,0.4);
     }
     div:target{
         box-shadow: none;
