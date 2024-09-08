@@ -5,14 +5,18 @@
     scroll-behavior: smooth;
 }
 :root{
-    --BORDER-C1:rgba(255, 255, 255, 0.475);
-    --BG-BLOCK2:rgba(245, 222, 179, 0.756);
+    --BORDER-C1:red;
+    --BG-BLOCK2:black;
     --BG-BLOCK1:rgb(30, 50, 205);
+    --theme1:rgb(3, 1, 31);
+    --theme2:black;
     --BG:black;
+    --T-COL:white;
+
     --topoffset:20px;
 }
 body{
-    background-color:var(--BG);
+    background-image:conic-gradient(red,rgba(185, 14, 14, 0.845),rgb(78, 32, 39),magenta,rgb(0, 0, 0));
     color:rgba(255, 255, 255, 0.859);
 }
 
@@ -49,7 +53,7 @@ img{
     place-items: center;
 }
 a{ 
-    color:green;
+    color:rgb(2, 186, 2);
     text-decoration: none;
     font-size: 20px;
 }
@@ -58,7 +62,7 @@ div:target{
     transition: all 500ms ease;
 }
 button{
-    background-color: transparent;
+    background-color: var(--theme1);
     border:none;
 }
 button:focus,button:active{
@@ -70,7 +74,7 @@ button:focus,button:active{
     justify-content: center;
     align-items: center;
     gap:10px;
-    border:2px solid var(--BORDER-C1);
+    /* border:2px solid var(--BORDER-C1); */
 }
 .flex_column{
     display:flex;
@@ -78,16 +82,16 @@ button:focus,button:active{
     justify-content: center;
     align-items: center;
     gap:10px;
-    border:2px solid var(--BORDER-C1);
+    /* border:2px solid var(--BORDER-C1); */
 }
 .navigation{
     width:100%;
     background-color: var(--BG-BLOCK2);
 }
 .small_box{
-    background-color:beige;
+    background-color:var(--theme1);
     border: 2px solid var(--BORDER-C1);
-    color: black;
+    color: var(--T-COL);
     border-radius: 10px;
     padding: 2px 4px 2px 4px;
     margin:2px 4px 2px 4px;
@@ -104,16 +108,16 @@ header{
     z-index: 1;
 }
 .banner{
-    color:maroon;
+    color:red;
     font-family: 'Times New Roman', Times, serif;
     font-size: 30px;
     text-align: center;
     width:100%;
-    background-color:transparent;
+    background-color:var(--theme1);
     border-bottom: 2px solid var(--BORDER-C1);
 }
 input.base{
-    background-color: transparent;
+    background-color: var(--theme1);
     outline:none;
     color:black;
 }
@@ -133,10 +137,10 @@ input.base{
     height:100%;
 }
 .large_box{
-    background-color:bisque;
-    border:2px solide white;
+    background-color:var(--theme1);
+    border:2px solid var(--BORDER-C1);
     padding:10px;
-    color:black;
+    color:var(--T-COL);
     font-size: 30px;
     scroll-behavior: smooth;
 }
@@ -151,7 +155,7 @@ input.base{
 .side_img{
     width:40vw;
     height:70vh;
-    background-color: rgba(245, 245, 245, 0.896);
+    background-color: var(--theme1);
     color:black;
     font-size: 30px;
 }
@@ -163,18 +167,30 @@ input.base{
     display:none;
 }
 .sticky_header{
-    position:sticky; 
+    position:sticky;
+    border:none; 
+    border-bottom:2px solid white;
     top:30px; 
-    background-color: bisque; 
+    background-color: black; 
     width:100%;
 }
-
+.h_scroller{
+    width:100%;
+    display:flex;
+    flex-flow:row nowarp;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width:500px;
+    margin:0px 20px 0px 20px;
+}
 @media screen and (max-width:426px) {
     img.my_pic_style{
         width:70vw;
     }
     #projects{
-        height:90vh;
+        height:auto;
     }
     .navigation .small_box{
         display:none;
@@ -194,7 +210,7 @@ input.base{
         box-shadow: none;
     }
     h1{
-        font-size: 40px;
+        font-size: 35px;
     }
     h2{
         font-size: 30px;
@@ -203,16 +219,22 @@ input.base{
         font-size: 25px;
     }
     .sticky_header{
-        top:33px;
+        top:45px;
     }
-    
-}
-@media screen and (max-width:780px){
+    .large_box{
+        height:auto;
+    }
+    .front_page{
+        height:auto;
+    }
+    #intro_container{
+        flex-flow: column nowrap;
+    }
     .my_pic_style{
         width:50vw;
     }
     .front_page{
-        height:70vh;
+        height:auto;
         width:80vw;
     }
     #intro_container{
@@ -226,4 +248,27 @@ input.base{
         height:50vh;
     }
 
+}
+
+@media screen and (max-width:780px) and (min-width:427px){
+    .my_pic_style{
+        width:50vw;
+    }
+    .front_page{
+        height:auto;
+        width:80vw;
+    }
+    #intro_container{
+        flex-flow: column nowrap;
+    }
+    .front_page_single{
+        width:80vw;
+    }
+    .side_img{
+        width:80vw;
+        height:50vh;
+    }
+    .sticky_header{
+        top:70px;
+    }
 }
